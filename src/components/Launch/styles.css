@@ -1,0 +1,40 @@
+.launch {
+  height: 200px;
+  width: 1000px;
+  padding: 8px;
+  display: flex;
+  box-shadow: 1px 1px 9px 1px darkgrey;
+  border-radius: 4px;
+  cursor: pointer;
+  /**Remove it**/
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.launch img {
+  height: 200px;
+  width: 200px;
+}
+
+.content {
+  margin-left: 20px;
+  font-size: 12px;
+  color: cadetblue;
+  width: 80%;
+}
+
+.content .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content p {
+  font-size: 20px;
+  display: -webkit-box;
+  line-height: 30px;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; 
+  margin-top: 20px;
+  color: grey;
+}
