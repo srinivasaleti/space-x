@@ -1,0 +1,14 @@
+.header {
+  background: cadetblue;
+  height: 250px;
+  width: 100%;
+  display: inline-block;
+}
+
+.header h1 {
+  color: white;
+  margin: 0px;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 80px;
+}
