@@ -1,0 +1,10 @@
+.launch-list {
+  width: 800px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.launch-list .launch {
+  margin-bottom: 20px;
+}

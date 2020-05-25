@@ -1,14 +1,11 @@
 .launch {
   height: 200px;
-  width: 1000px;
+  width: 100%;
   padding: 8px;
   display: flex;
   box-shadow: 1px 1px 9px 1px darkgrey;
   border-radius: 4px;
   cursor: pointer;
-  /**Remove it**/
-  margin-left: 50px;
-  margin-top: 50px;
 }
 
 .launch img {
