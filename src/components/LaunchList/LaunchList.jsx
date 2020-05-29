@@ -2,7 +2,7 @@ import React from 'react';
 import { Launch } from '../Launch/Launch';
 import './styles.css';
 import axios from 'axios';
-
+import { Link } from "react-router-dom";
 export class LaunchList extends React.Component {
 
   state = {
@@ -24,15 +24,21 @@ export class LaunchList extends React.Component {
   }
 
   launchList = () => {
-    const launchListComponents = this.state.launches.map((launch,index) => {
+    const launchListComponents = this.state.launches.map((launch, index) => {
       const image = launch.links.flickr_images.length === 0 ?
         'https://upload.wikimedia.org/wikipedia/commons/9/9a/Soyuz_TMA-9_launch.jpg' : launch.links.flickr_images[0];
-      return <Launch
-        key={"launch_"+index}
-        banner={image}
-        title={launch.mission_name}
-        launchDate={launch.launch_date_local}
-        description={launch.details} />
+      return (
+        <Link
+          key={"launch_" + index}
+          to={"/launch/"+launch.flight_number}
+        >
+          <Launch
+            banner={image}
+            title={launch.mission_name}
+            launchDate={launch.launch_date_local}
+            description={launch.details} />
+        </Link>
+      )
     })
 
     return launchListComponents;
@@ -41,7 +47,7 @@ export class LaunchList extends React.Component {
   render() {
     return (
       <div className="launch-list">
-          {this.launchList()}
+        {this.launchList()}
       </div>
     )
   }
