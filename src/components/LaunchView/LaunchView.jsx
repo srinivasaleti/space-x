@@ -51,7 +51,8 @@ export class LaunchView extends React.Component {
 
 
   render() {
-    const hasImages = this.state.launch.links.flickr_images.length > 0
+    const hasImages = this.state.launch.links.flickr_images.length > 0;
+    
     return (
       <div className="launch-view">
         {this.launchAttribute("Mission Name", "mission_name")}
@@ -70,6 +71,7 @@ export class LaunchView extends React.Component {
 
           )
         }
+
         <p className='launch-description'>{this.state.launch.details}</p>
       </div>
     )
